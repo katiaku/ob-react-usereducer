@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 
 const FIELD = 'FIELD';
 const LOGIN = 'LOGIN';
-const SUCCESS = ' SUCCESS';
+const SUCCESS = 'SUCCESS';
 const ERROR = 'ERROR';
 const LOGOUT = 'LOGOUT';
 
@@ -57,13 +57,10 @@ const Loginusereducer = () => {
 
     const [state, dispatch] = useReducer(loginReducer, initialState);
 
-    // Obtain all variables from state
     const { username, password, error, isLoading, isLoggedIn } = state;
 
-    // Submit
     const submit = async (e) => {
         e.preventDefault();
-        // Dispatch Action:
         dispatch({type:LOGIN});
         try {
             await function login({username, password}) {
@@ -113,7 +110,7 @@ const Loginusereducer = () => {
                                 onChange = {(e) => 
                                     dispatch({
                                         type: FIELD, 
-                                        fieldName:'username', 
+                                        fieldName: 'username', 
                                         payload: e.currentTarget.value
                                         })
                                 }
@@ -133,7 +130,6 @@ const Loginusereducer = () => {
                             <button type='submit'>
                                 {isLoading ? 'Logging...' : 'Login'}
                             </button>
-
                         </form>
                     )
                 }

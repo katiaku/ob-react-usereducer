@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const Loginusestate = () => {
 
@@ -73,14 +73,10 @@ const Loginusestate = () => {
                             <button type='submit'>
                                 {isLoading ? 'Logging...' : 'Login'}
                             </button>
-
                         </form>
                     )
                 }
-
             </div>
-
-            
         </div>
     );
 }
