@@ -1,14 +1,11 @@
 import React, { useReducer } from 'react';
 
-
-// Actions
 const FIELD = 'FIELD';
 const LOGIN = 'LOGIN';
 const SUCCESS = ' SUCCESS';
 const ERROR = 'ERROR';
 const LOGOUT = 'LOGOUT';
 
-// INITIAL STATE
 const initialState = {
     username: '',
     password: '',
@@ -17,8 +14,6 @@ const initialState = {
     isLoggedIn: false
 }
 
-
-// Reducer
 const loginReducer = (state, action) => {
     switch (action.type) {
         case FIELD:
@@ -84,7 +79,7 @@ const Loginusereducer = () => {
             }
             dispatch({type: SUCCESS})
         } catch (error) {
-           dispatch({type:ERROR})
+            dispatch({type:ERROR})
         }
     }
 

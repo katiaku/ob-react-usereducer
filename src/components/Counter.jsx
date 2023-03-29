@@ -1,6 +1,5 @@
 import React, { useReducer, useContext } from 'react';
 
-// Actions
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 const RESET = 'RESET';
@@ -19,12 +18,10 @@ const Points = () => {
 
 const Counter = () => {
 
-    // Initial State for Reducer
     const initialState = {
         count: 0
     }
 
-    // Reducer to change State
     const reducer = (state, action) => {
 
         switch (action.type) {
@@ -64,7 +61,7 @@ const Counter = () => {
                             })
                     }
                 >
-                    Increment *2
+                    Increment * 2
                 </button>
                 <button 
                     onClick = {
