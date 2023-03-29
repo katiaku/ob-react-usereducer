@@ -11,7 +11,11 @@ function App() {
         <h1>useReducer Examples</h1>
         {/* <Counter></Counter> */}
         {/* <Loginusestate></Loginusestate> */}
-        <Loginusereducer></Loginusereducer>
+        {/* <Loginusereducer></Loginusereducer> */}
+        <Provider>
+          <AddTodo />
+          <TodoList />
+        </Provider>
       </header>
     </div>
   );
